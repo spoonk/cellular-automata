@@ -63,7 +63,7 @@ class Settings extends Component {
                 <div id="settings-container">
                     <SettingBox 
                         name={"rule"}
-                        description={["Used for generating living or dead cells based on 3 neighbors in previous generation.", 
+                        description={["Used for generating living or dead cells based on their 3 neighbors in previous generation.", 
                             "I recommend rules 13, 18, 30, 45, 57, 67, 77, 89 105, 133, 150, 169, or 225 for some cool patterns"]
                         }
                         cb={this.setRule.bind(this)}
@@ -95,10 +95,11 @@ class Settings extends Component {
                         min = {0}
                         max = {500}
                     />
+                    <button id="generate-button" onClick={this.generateBoard} >
+                        run
+                    </button>
                 </div>
-                <button id="generate-button" onClick={this.generateBoard} >
-                    run
-                </button>
+                
             </div>
         );
     }
