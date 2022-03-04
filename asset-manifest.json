@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cellular-automata/static/css/main.fbda8fdb.css",
+    "main.js": "/cellular-automata/static/js/main.00a1ff8c.js",
+    "index.html": "/cellular-automata/index.html",
+    "main.fbda8fdb.css.map": "/cellular-automata/static/css/main.fbda8fdb.css.map",
+    "main.00a1ff8c.js.map": "/cellular-automata/static/js/main.00a1ff8c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbda8fdb.css",
+    "static/js/main.00a1ff8c.js"
+  ]
+}
