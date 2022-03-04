@@ -32,7 +32,9 @@ code {
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
+  -ms-overflow-style:none;
   overflow:scroll;
+  overflow-y:scroll;
 }
 
 #settings-container{
@@ -107,6 +109,8 @@ input[type=number] {
   border-radius: 10px;
   filter: drop-shadow(2px 2px 2px #16191f);
   background-color: #add7ff;
+  margin-bottom:50px;
+  margin-top:50px;
 }
 
 #content{
