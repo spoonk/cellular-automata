@@ -5,6 +5,7 @@ import {genBoard} from "./simulate"
 import Popup from './components/Popup';
 import translation from "./images/translation.svg";
 import configurations from "./images/configurations.svg"
+import Editor from './components/Editor';
 
 class App extends Component {
   constructor(props) {
@@ -20,13 +21,15 @@ class App extends Component {
       width: 150,
       generations: 100,
       rule: 30,
-      ruleInfo: true
+      ruleInfo: false,
+      editor: true,
+      startNodes:1,
     }
 
     this.rulePop = (
       <div id="rule-popup">
         <p style={{fontSize: "32px", color:"#add7ff"}}>
-            Elementary Cellular Automaton
+            Elementary Cellular Automata
         </p>
         <p className='popup-text'>
           Put simply, a cellular automaton is a collection "cells" that exist in a binary state of either living or dead. With each discrete time-step from 
@@ -70,6 +73,7 @@ class App extends Component {
   }
   
   setUpSeed = (width) => {
+    console.log('yo');
     var arr = [];
     for (var i =0; i < width; i++){
       arr.push(0);
@@ -79,18 +83,25 @@ class App extends Component {
   }
 
   generateBoard = (settings) => {
-    this.setState({
-      // could add some behavior to handle where we only increased number of generations
-        // to use previous result and do less computation
-      board:genBoard(this.state.seed, settings.rule, settings.generations, settings.width),
-      rule: settings.rule,
-      generations: settings.generations
+    var hello = [];
+    hello.push(this.state.seed);
+
+    // need to clear board before rendering to reset it
+    this.setState({board : hello}, () => {
+      this.setState({
+        // could add some behavior to handle where we only increased number of generations
+          // to use previous result and do less computation
+        board:genBoard(this.state.seed, settings.rule, settings.generations, settings.width),
+        rule: settings.rule,
+        generations: settings.generations,
+        width: settings.width
+      })
     })
+    
   }
 
-  toggleRuleInfo = () => {
-    this.setState({ruleInfo: !this.state.ruleInfo});
-  }
+  toggleRuleInfo = () => {this.setState({ruleInfo: !this.state.ruleInfo});}
+  toggleEditor = () => {this.setState({editor: !this.state.editor});}
 
   render() {
     return (
@@ -102,7 +113,24 @@ class App extends Component {
               toggle = {this.toggleRuleInfo}
             />
           :
-            <></>
+            this.state.editor ? 
+            <Popup
+              component={<Editor 
+                  seed = {this.state.seed}
+                  reset = {(width) => {
+                    var newSeed =  this.setUpSeed(width);
+                    var board = [];
+                    board.push(newSeed)
+                    this.setState({seed : newSeed , board: board});
+                    }
+                  }
+                  width = {this.state.width}
+                />
+              }
+              toggle = {this.toggleEditor}
+            />
+            :
+              <></>
         }
         <div id="main-container">
           <Content 
@@ -113,6 +141,7 @@ class App extends Component {
           <Settings 
             generateBoard = {this.generateBoard}
             toggleRuleInfo = {this.toggleRuleInfo}
+            toggleEditor = {this.toggleEditor}
             updateSeed = {(width) => {
               var newSeed =  this.setUpSeed(width);
               var board = [];

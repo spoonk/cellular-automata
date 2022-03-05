@@ -2,18 +2,11 @@ import React, { Component } from 'react';
 import Node from './Node';
 
 class Content extends Component {
-    constructor(props) {
-      super(props)
-    
-      this.state = {
-        //  first
-      }
-    }
 
     // https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
     sleep = ms => new Promise(r => setTimeout(r, ms));
 
-    componentDidUpdate = (prevProps) => { this.animateRows(); }
+    componentDidUpdate = () => { this.animateRows(); }
 
     animateRows = async() => {
         var rows = Array.from(document.body.getElementsByClassName("row"));

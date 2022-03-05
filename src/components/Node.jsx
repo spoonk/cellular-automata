@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Node = ({val, row, col}) => {
+const Node = ({val, row, col, bordered}) => {
   return (
    <div className="container">
        <div className="dummy"></div>
        <div
-            className={"node"}
+            className={bordered ? "node node-bordered" : "node"}
             style=
                 {val === 1? 
                     {backgroundColor: "#88C0D0"} 

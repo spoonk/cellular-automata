@@ -115,7 +115,6 @@ input[type=number] {
 }
 
 #generate-button:active{
-  /* background-color: red; */
   background-color: #9fc8ee;
 
   -moz-box-shadow:    inset 1px 1px 4px #484848;
@@ -173,6 +172,7 @@ input[type=number] {
   opacity: 1;
 }
 
+
 /* https://www.google.com/url?sa=i&url=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dpeymanslh.blueberry-dark-theme&psig=AOvVaw3kc1IdMy2rg-6xaCTTA-8e&ust=1646450169542000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIjy1P6-q_YCFQAAAAAdAAAAABAJ */
 
 
@@ -207,7 +207,6 @@ input[type=number] {
   height: calc(100% - 90px);
   padding:40px;
   overflow: scroll;
-
 }
 .popup-text{
   padding-top: 10px;
@@ -227,4 +226,85 @@ input[type=number] {
   filter: drop-shadow(2px 2px 2px #16191f);
   background-color: #add7ff;
   margin-top:50px;
+}
+
+.toggle-button{
+  /* float:right; */
+  height: 50%;
+  font-size: 20px;
+  margin:10px;
+  width:35px;
+  border-radius: 100px;
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #add7ff;
+  color: #add7ff;
+  transition: 0.2s;
+}
+.toggle-button:hover{
+  border: 2px solid #e4f0fb;
+  color : #e4f0fb;
+}
+
+#editor-popup{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#editor-area{
+  /* border: 1px solid red; */
+  height: 100%;
+  width:100%;
+  overflow: scroll;
+}
+
+#editor-info{
+  height: 100px;
+  /* border: 1px solid red; */
+  display: flex;
+}
+
+#editor-active-container{
+  user-select: none;
+  position: relative;
+  overflow: scroll;
+  height:50%;
+  top:50%;
+  transform:translate(0, -50%);
+  /* border: 1px solid orange;; */
+}
+#editor-row{
+  width:100%;
+  display: flex;
+  position: relative;
+  top:50%;
+  /* height: 200px; */
+  width: 4000px;
+}
+
+#row-preview{
+  top:100px;
+  width:100%;
+  display: flex;
+  position: relative;
+  /* background-color: red; */
+  /* height: 300px; */
+}
+
+.node-bordered{
+  border: 1px solid #7390AA;
+}
+
+.info-button{
+  position: relative;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width:30%;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  filter: drop-shadow(2px 2px 2px #16191f);
+  background-color: #add7ff;
 }

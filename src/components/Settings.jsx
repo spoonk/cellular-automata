@@ -85,7 +85,7 @@ class Settings extends Component {
                         min = {0}
                         max = {500}
                     />
-                    <button id="generation-zero-editor-button">
+                    <button id="generation-zero-editor-button" onClick={this.props.toggleEditor}>
                         edit generation 0    
                     </button>
                     <button id="generate-button" onClick={this.generateBoard} >
