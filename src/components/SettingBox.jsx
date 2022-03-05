@@ -21,9 +21,10 @@ export default class SettingBox extends Component {
     render() {
         return (
             <div className='setting-box'>
-                <p className="name">
+                <div className="name">
                     {this.props.name}
-                </p>
+                    {this.props.toggle ? <button className="toggle-button" onClick={this.props.toggle}>  ?   </button>:<></>}
+                </div>
                 <p className="description">
                     {
                         !(Array.isArray(this.props.description))? 

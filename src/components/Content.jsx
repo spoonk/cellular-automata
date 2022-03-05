@@ -32,7 +32,10 @@ class Content extends Component {
                 {
                     this.props.board.map((arr, row) => {
                         return (
-                            <div className={"row invisible"}  key = {row + this.props.rule + this.props.height} id={"row" + row}> 
+                            <div 
+                                className={ row === 0 ? "row ": "row invisible" }  
+                                key = {row + this.props.rule + this.props.height} id={"row" + row}
+                            > 
                                 {arr.map((node, col) => {
                                     return <Node 
                                         val = {node} 

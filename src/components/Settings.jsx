@@ -29,8 +29,6 @@ class Settings extends Component {
         }
     }
 
-
-    // also need to change seed
     setWidth = (width) => {
         if (width > 500 || width < 0){
             alert("width must be between 0 and 500")
@@ -63,22 +61,14 @@ class Settings extends Component {
                 <div id="settings-container">
                     <SettingBox 
                         name={"rule"}
-                        description={["Used for generating living or dead cells based on their 3 neighbors in previous generation.", 
-                            "I recommend rules 13, 18, 30, 45, 57, 67, 77, 89 105, 133, 150, 169, or 225 for some cool patterns"]
-                        }
+                        description={"I recommend rules 13, 18, 30, 45, 57, 67, 77, 89 105, 133, 150, 169, and 225"}
+                        toggle = {this.props.toggleRuleInfo}
                         cb={this.setRule.bind(this)}
                         def = {30}
                         min = {0}
                         max = {255}
                     />
-                    <SettingBox 
-                        name={"gen 0"}
-                        description={"number of nodes in generation 0"}
-                        cb={this.setRule.bind(this)}
-                        def = {30}
-                        min = {0}
-                        max = {this.state.width}
-                    />
+                
                     <SettingBox 
                         name={"width"}
                         description={"number of cells in each generation"}
@@ -95,6 +85,9 @@ class Settings extends Component {
                         min = {0}
                         max = {500}
                     />
+                    <button id="generation-zero-editor-button">
+                        edit generation 0    
+                    </button>
                     <button id="generate-button" onClick={this.generateBoard} >
                         run
                     </button>
