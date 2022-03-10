@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Node from './Node'
 import EditorNode from './EditorNode';
 import RowPreview from './RowPreview';
 
@@ -99,6 +98,9 @@ export default class Editor extends Component {
                     </div>
                 </div>
             </div>
+            <div id="editor-tips">
+                Click / drag on a cell to change it's state. Blue means the cell is alive and gray means the cell is dead. 
+            </div>
             <div id="editor-info">
                 <div style={{width:"50%"}}>
                     <button id="clear-button" className='info-button' onClick={this.reset}>
@@ -106,8 +108,15 @@ export default class Editor extends Component {
                     </button>
                 </div>
                 <div style={{width:"50%"}}>
-                    <button id="clear-button" className='info-button' onClick={this.props.toggle}>
-                        exit
+                    <button id="clear-button" className='info-button' onClick={() => {
+                        for(var i = 0; i < this.props.seed.length; i++){
+                            this.props.seed[i] = 1;
+                        }
+                        this.setState({mouseIsPressed: true}, () => {
+                            this.setState({mouseIsPressed: false})
+                        })
+                    }}>
+                        fill
                     </button>
                 </div>
                 
