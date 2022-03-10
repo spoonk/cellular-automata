@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cellular-automata/static/css/main.11a46fb5.css",
-    "main.js": "/cellular-automata/static/js/main.6e74290b.js",
+    "main.css": "/cellular-automata/static/css/main.d5b36c77.css",
+    "main.js": "/cellular-automata/static/js/main.68fcce61.js",
     "static/media/translation.svg": "/cellular-automata/static/media/translation.84e4b73564f23426516f147712b1f28d.svg",
     "static/media/configurations.svg": "/cellular-automata/static/media/configurations.a5d578916989ef7c4bae5e450985ec54.svg",
     "index.html": "/cellular-automata/index.html",
-    "main.11a46fb5.css.map": "/cellular-automata/static/css/main.11a46fb5.css.map",
-    "main.6e74290b.js.map": "/cellular-automata/static/js/main.6e74290b.js.map"
+    "main.d5b36c77.css.map": "/cellular-automata/static/css/main.d5b36c77.css.map",
+    "main.68fcce61.js.map": "/cellular-automata/static/js/main.68fcce61.js.map"
   },
   "entrypoints": [
-    "static/css/main.11a46fb5.css",
-    "static/js/main.6e74290b.js"
+    "static/css/main.d5b36c77.css",
+    "static/js/main.68fcce61.js"
   ]
 }
