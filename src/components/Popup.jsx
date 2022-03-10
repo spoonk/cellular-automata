@@ -7,6 +7,7 @@ const Popup = ({component, toggle}) => {
     <div>
         <div className="popup-container" onClick={toggle}></div>
         <div className="popup">
+            <div className="popup-exit-button" onClick={toggle}>X</div>
             {component}
         </div> 
     </div>   

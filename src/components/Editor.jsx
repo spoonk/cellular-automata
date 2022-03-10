@@ -24,8 +24,6 @@ export default class Editor extends Component {
         container.scrollTo(2000 - container.clientWidth / 2, 0);
     }
 
-
-
     handleMouseDown = (index) => {
         console.log("mouseDown");
         this.props.seed[index] = this.props.seed[index] === 1 ? 0 : 1;
@@ -65,7 +63,6 @@ export default class Editor extends Component {
         this.props.seed[index] = this.props.seed[index] === 1 ? 0 : 1;
         this.setState({seed: this.props.seed})
     }
-
 
   render() {
     return (
@@ -109,7 +106,7 @@ export default class Editor extends Component {
                     </button>
                 </div>
                 <div style={{width:"50%"}}>
-                    <button id="clear-button" className='info-button' onClick={this.reset}>
+                    <button id="clear-button" className='info-button' onClick={this.props.toggle}>
                         exit
                     </button>
                 </div>

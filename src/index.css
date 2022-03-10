@@ -5,12 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #262636; */
   background-color: #2E3440;
   color: #e4f0fb;
   overflow: hidden;
-  /* overflow: hidden; */
-
 }
 
 code {
@@ -21,8 +18,8 @@ code {
 * {
   margin:0;
   padding:0;
-  /* overflow: none; */
 }
+
 #settings{
   height: 100vh;
   width:400px;
@@ -32,7 +29,6 @@ code {
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
-  /* -ms-overflow-style:none; */
   overflow:scroll;
   overflow-y:scroll;
 }
@@ -43,11 +39,9 @@ code {
 }
 
 .setting-box{
-  /* border-top: 1px solid #81879E; */
   width:100%;
-  padding-bottom: 6%;
-  padding-top: 6%;
-  /* padding:3%; */
+  padding-bottom: 5%;
+  padding-top: 5%;
 }
 
 .name{
@@ -110,13 +104,11 @@ input[type=number] {
   filter: drop-shadow(2px 2px 2px #16191f);
   background-color: #add7ff;
   margin-bottom:50px;
-  /* margin-top:50px; */
   transition: 0.2s;
 }
 
 #generate-button:active{
   background-color: #9fc8ee;
-
   -moz-box-shadow:    inset 1px 1px 4px #484848;
    -webkit-box-shadow: inset 1px 1px 3px #484848;
    box-shadow:         inset 1px 1px 3px #484848;
@@ -149,7 +141,6 @@ input[type=number] {
 /* https://stackoverflow.com/questions/5445491/height-equal-to-dynamic-width-css-fluid-layout */
 .dummy {
   margin-top: 100%;
-  /* 1:1 aspect ratio for all nodes*/
 }
 
 .container {
@@ -172,10 +163,7 @@ input[type=number] {
   opacity: 1;
 }
 
-
 /* https://www.google.com/url?sa=i&url=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3Dpeymanslh.blueberry-dark-theme&psig=AOvVaw3kc1IdMy2rg-6xaCTTA-8e&ust=1646450169542000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIjy1P6-q_YCFQAAAAAdAAAAABAJ */
-
-
 .popup-container{
   position: absolute;
   width:100vw;
@@ -193,12 +181,26 @@ input[type=number] {
   min-width:500px;
   opacity: 1;
   border-radius: 10px;
-  /* background-color: #16191f; */
   background-color: #23282e;
   top: 50%;
   left:50%;
   transform: translate(-50%, -50%);
   filter: drop-shadow(2px 2px 3px #16191f);
+}
+.popup-exit-button{
+  background-color: rgb(245, 88, 88);
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  margin:10px;
+  text-align: center;
+  align-items: center;
+  right:0;
+  line-height: 30px;
+  user-select: none;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 #rule-popup{
@@ -229,7 +231,6 @@ input[type=number] {
 }
 
 .toggle-button{
-  /* float:right; */
   height: 50%;
   font-size: 20px;
   margin:10px;
@@ -252,7 +253,6 @@ input[type=number] {
 }
 
 #editor-area{
-  /* border: 1px solid red; */
   height: 100%;
   width:100%;
   overflow: scroll;
@@ -260,7 +260,6 @@ input[type=number] {
 
 #editor-info{
   height: 100px;
-  /* border: 1px solid red; */
   display: flex;
 }
 
@@ -271,14 +270,12 @@ input[type=number] {
   height:50%;
   top:50%;
   transform:translate(0, -50%);
-  /* border: 1px solid orange;; */
 }
 #editor-row{
   width:100%;
   display: flex;
   position: relative;
   top:50%;
-  /* height: 200px; */
   width: 4000px;
 }
 
@@ -287,8 +284,6 @@ input[type=number] {
   width:100%;
   display: flex;
   position: relative;
-  /* background-color: red; */
-  /* height: 300px; */
 }
 
 .node-bordered{

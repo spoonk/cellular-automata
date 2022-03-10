@@ -21,8 +21,8 @@ class App extends Component {
       width: 150,
       generations: 100,
       rule: 30,
-      ruleInfo: false,
-      editor: true,
+      ruleInfo: true,
+      editor: false,
       startNodes:1,
     }
 
@@ -115,7 +115,8 @@ class App extends Component {
           :
             this.state.editor ? 
             <Popup
-              component={<Editor 
+              component={
+                <Editor 
                   seed = {this.state.seed}
                   reset = {(width) => {
                     var newSeed =  this.setUpSeed(width);
@@ -125,6 +126,8 @@ class App extends Component {
                     }
                   }
                   width = {this.state.width}
+                  toggle = {this.toggleEditor}
+
                 />
               }
               toggle = {this.toggleEditor}
